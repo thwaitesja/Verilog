@@ -1,0 +1,12 @@
+module delay(
+	output	[7:0] HEX0,
+	output	[7:0] HEX1,
+	output	[7:0] HEX2,
+	output	[7:0]	HEX3,
+	output	[9:0] LEDR,
+	input		[9:0] SW,
+	input		KEY0,
+	input		KEY1,
+	input		CLK_50MHZ,
+	input  	CLK_10MHZ
+);

@@ -1,0 +1,3 @@
+module Magic(
+	output		     [9:0]		LED,
+);

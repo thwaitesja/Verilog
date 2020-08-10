@@ -1,0 +1,4 @@
+module shuffle(
+
+	output		[9:0]	q,
+	input 		  			clk

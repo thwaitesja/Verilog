@@ -1,0 +1,24 @@
+Quartus Prime Archive log --	C:/Users/thwaitester/Documents/fpga/HW8/HW8_tmp_archive.qarlog
+
+Archive:	C:/Users/thwaitester/Documents/fpga/HW8/HW8_tmp_archive.qar
+Date:		Sun Apr 07 15:09:03 2019
+Quartus Prime		18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/thwaitester/Documents/fpga/HW8/HW8.qpf
+C:/Users/thwaitester/Documents/fpga/HW8/Project1.qsf
+C:/Users/thwaitester/Documents/fpga/HW8/Project1_assignment_defaults.qdf
+C:/Users/thwaitester/Documents/fpga/HW8/Project1_top.v
+C:/Users/thwaitester/Documents/fpga/HW8/SevenSegment.v
+C:/Users/thwaitester/Documents/fpga/HW8/verilog_intro.qsf
+C:/Users/thwaitester/Documents/fpga/HW8/verilog_intro_assignment_defaults.qdf
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Apr 07 15:09:13 2019
+Source archive file:	C:/Users/thwaitester/Documents/fpga/HW8/HW8_tmp_archive.qar
+Archive was extracted into	C:/Users/thwaitester/Documents/fpga/HW8_copy/
+		 - successfully.

@@ -1,0 +1,7 @@
+
+State Machine - |Project2_top|state
+Name state.SHOWING state.TIMING state.WAITING state.RESTING 
+state.RESTING 0 0 0 0 
+state.WAITING 0 0 1 1 
+state.TIMING 0 1 0 1 
+state.SHOWING 1 0 0 1 

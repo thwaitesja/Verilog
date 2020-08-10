@@ -1,0 +1,66 @@
+|Project1_top
+HEX0[0] <= SevenSegment:comb_138.hex[0]
+HEX0[1] <= SevenSegment:comb_138.hex[1]
+HEX0[2] <= SevenSegment:comb_138.hex[2]
+HEX0[3] <= SevenSegment:comb_138.hex[3]
+HEX0[4] <= SevenSegment:comb_138.hex[4]
+HEX0[5] <= SevenSegment:comb_138.hex[5]
+HEX0[6] <= SevenSegment:comb_138.hex[6]
+HEX0[7] <= SevenSegment:comb_138.hex[7]
+LEDR[0] <= flash05.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= flash1.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= <GND>
+LEDR[6] <= <GND>
+LEDR[7] <= <GND>
+LEDR[8] <= <GND>
+LEDR[9] <= <GND>
+MAX10_CLK1_50 => flash1.CLK
+MAX10_CLK1_50 => count1[0].CLK
+MAX10_CLK1_50 => count1[1].CLK
+MAX10_CLK1_50 => count1[2].CLK
+MAX10_CLK1_50 => count1[3].CLK
+MAX10_CLK1_50 => count1[4].CLK
+MAX10_CLK1_50 => count1[5].CLK
+MAX10_CLK1_50 => count1[6].CLK
+MAX10_CLK1_50 => count1[7].CLK
+MAX10_CLK1_50 => count1[8].CLK
+MAX10_CLK1_50 => count1[9].CLK
+MAX10_CLK1_50 => count1[10].CLK
+MAX10_CLK1_50 => count1[11].CLK
+MAX10_CLK1_50 => count1[12].CLK
+MAX10_CLK1_50 => count1[13].CLK
+MAX10_CLK1_50 => count1[14].CLK
+MAX10_CLK1_50 => count1[15].CLK
+MAX10_CLK1_50 => count1[16].CLK
+MAX10_CLK1_50 => count1[17].CLK
+MAX10_CLK1_50 => count1[18].CLK
+MAX10_CLK1_50 => count1[19].CLK
+MAX10_CLK1_50 => count1[20].CLK
+MAX10_CLK1_50 => count1[21].CLK
+MAX10_CLK1_50 => count1[22].CLK
+MAX10_CLK1_50 => count1[23].CLK
+MAX10_CLK1_50 => count1[24].CLK
+MAX10_CLK1_50 => count1[25].CLK
+MAX10_CLK1_50 => count1[26].CLK
+MAX10_CLK1_50 => count1[27].CLK
+
+
+|Project1_top|SevenSegment:comb_138
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[7] <= point.DB_MAX_OUTPUT_PORT_TYPE
+bin[0] => Decoder0.IN3
+bin[1] => Decoder0.IN2
+bin[2] => Decoder0.IN1
+bin[3] => Decoder0.IN0
+point => hex[7].DATAIN
+
+

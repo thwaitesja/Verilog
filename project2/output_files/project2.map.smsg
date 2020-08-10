@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at LFSR.v(4): object "q" differs only in case from object "Q" in the same scope File: C:/Users/thwaitester/Documents/fpga/project2/LFSR.v Line: 4
+Info (10281): Verilog HDL Declaration information at Project2_top.v(15): object "HEX0" differs only in case from object "hex0" in the same scope File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 15
+Info (10281): Verilog HDL Declaration information at Project2_top.v(18): object "HEX3" differs only in case from object "hex3" in the same scope File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 18
+Info (10281): Verilog HDL Declaration information at Project2_top.v(36): object "timing" differs only in case from object "TIMING" in the same scope File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 36
+Warning (10268): Verilog HDL information at BCD.v(15): always construct contains both blocking and non-blocking assignments File: C:/Users/thwaitester/Documents/fpga/project2/BCD.v Line: 15
+Info (10281): Verilog HDL Declaration information at shuffle.v(4): object "q" differs only in case from object "Q" in the same scope File: C:/Users/thwaitester/Documents/fpga/project2/shuffle.v Line: 4

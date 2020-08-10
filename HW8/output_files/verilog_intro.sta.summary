@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -3.813
+TNS   : -48.673
+
+Type  : Slow 1200mV 85C Model Setup 'flash1'
+Slack : -0.089
+TNS   : -0.176
+
+Type  : Slow 1200mV 85C Model Hold 'flash1'
+Slack : 0.332
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
+Slack : 0.546
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -38.438
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'flash1'
+Slack : -1.222
+TNS   : -4.888
+
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -3.423
+TNS   : -41.776
+
+Type  : Slow 1200mV 0C Model Setup 'flash1'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'flash1'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.501
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -38.438
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'flash1'
+Slack : -1.222
+TNS   : -4.888
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -1.365
+TNS   : -9.820
+
+Type  : Fast 1200mV 0C Model Setup 'flash1'
+Slack : 0.478
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'flash1'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
+Slack : 0.245
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
+Slack : -3.000
+TNS   : -36.833
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'flash1'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

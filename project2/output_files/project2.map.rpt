@@ -1,0 +1,843 @@
+Analysis & Synthesis report for project2
+Wed May 08 22:16:32 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Project2_top|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |Project2_top
+ 15. Parameter Settings for User Entity Instance: Clock_divider:clock1
+ 16. Parameter Settings for User Entity Instance: BCD_counter:counter
+ 17. Parameter Settings for User Entity Instance: TopScore:score
+ 18. Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_221"
+ 19. Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_220"
+ 20. Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_219"
+ 21. Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_218"
+ 22. Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_63"
+ 23. Port Connectivity Checks: "BCD_counter:counter|BCD:comb_58"
+ 24. Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_57"
+ 25. Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_51"
+ 26. Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_45"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 08 22:16:32 2019       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; project2                                    ;
+; Top-level Entity Name              ; Project2_top                                ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 390                                         ;
+;     Total combinational functions  ; 370                                         ;
+;     Dedicated logic registers      ; 125                                         ;
+; Total registers                    ; 125                                         ;
+; Total pins                         ; 56                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; Project2_top       ; project2           ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; delay.v                          ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/delay.v         ;         ;
+; LFSR.v                           ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/LFSR.v          ;         ;
+; Project2_top.v                   ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v  ;         ;
+; BCD_decoder.v                    ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/BCD_decoder.v   ;         ;
+; BCD_counter.v                    ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v   ;         ;
+; Clock_divider.v                  ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/Clock_divider.v ;         ;
+; TopScore.v                       ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/TopScore.v      ;         ;
+; BCD.v                            ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/BCD.v           ;         ;
+; shuffle.v                        ; yes             ; User Verilog HDL File  ; C:/Users/thwaitester/Documents/fpga/project2/shuffle.v       ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimated Total logic elements              ; 390             ;
+;                                             ;                 ;
+; Total combinational functions               ; 370             ;
+; Logic element usage by number of LUT inputs ;                 ;
+;     -- 4 input functions                    ; 112             ;
+;     -- 3 input functions                    ; 134             ;
+;     -- <=2 input functions                  ; 124             ;
+;                                             ;                 ;
+; Logic elements by mode                      ;                 ;
+;     -- normal mode                          ; 314             ;
+;     -- arithmetic mode                      ; 56              ;
+;                                             ;                 ;
+; Total registers                             ; 125             ;
+;     -- Dedicated logic registers            ; 125             ;
+;     -- I/O registers                        ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 56              ;
+;                                             ;                 ;
+; Embedded Multiplier 9-bit elements          ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; CLK_50MHZ~input ;
+; Maximum fan-out                             ; 44              ;
+; Total fan-out                               ; 1522            ;
+; Average fan-out                             ; 2.51            ;
++---------------------------------------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                      ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------+---------------+--------------+
+; |Project2_top                ; 370 (142)           ; 125 (6)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 56   ; 0            ; 0          ; |Project2_top                                         ; Project2_top  ; work         ;
+;    |BCD_counter:counter|     ; 76 (16)             ; 20 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter                     ; BCD_counter   ; work         ;
+;       |BCD:comb_40|          ; 9 (9)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD:comb_40         ; BCD           ; work         ;
+;       |BCD:comb_46|          ; 8 (8)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD:comb_46         ; BCD           ; work         ;
+;       |BCD:comb_52|          ; 8 (8)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD:comb_52         ; BCD           ; work         ;
+;       |BCD:comb_58|          ; 7 (7)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD:comb_58         ; BCD           ; work         ;
+;       |BCD_decoder:comb_45|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD_decoder:comb_45 ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_51|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD_decoder:comb_51 ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_57|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD_decoder:comb_57 ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_63|  ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|BCD_counter:counter|BCD_decoder:comb_63 ; BCD_decoder   ; work         ;
+;    |Clock_divider:clock1|    ; 49 (49)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|Clock_divider:clock1                    ; Clock_divider ; work         ;
+;    |LFSR:rand|               ; 1 (1)               ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|LFSR:rand                               ; LFSR          ; work         ;
+;    |TopScore:score|          ; 84 (56)             ; 32 (32)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|TopScore:score                          ; TopScore      ; work         ;
+;       |BCD_decoder:comb_218| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|TopScore:score|BCD_decoder:comb_218     ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_219| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|TopScore:score|BCD_decoder:comb_219     ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_220| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|TopScore:score|BCD_decoder:comb_220     ; BCD_decoder   ; work         ;
+;       |BCD_decoder:comb_221| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|TopScore:score|BCD_decoder:comb_221     ; BCD_decoder   ; work         ;
+;    |delay:time1|             ; 16 (16)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|delay:time1                             ; delay         ; work         ;
+;    |shuffle:leds|            ; 2 (2)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |Project2_top|shuffle:leds                            ; shuffle       ; work         ;
++------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------+
+; State Machine - |Project2_top|state                                          ;
++---------------+---------------+--------------+---------------+---------------+
+; Name          ; state.SHOWING ; state.TIMING ; state.WAITING ; state.RESTING ;
++---------------+---------------+--------------+---------------+---------------+
+; state.RESTING ; 0             ; 0            ; 0             ; 0             ;
+; state.WAITING ; 0             ; 0            ; 1             ; 1             ;
+; state.TIMING  ; 0             ; 1            ; 0             ; 1             ;
+; state.SHOWING ; 1             ; 0            ; 0             ; 1             ;
++---------------+---------------+--------------+---------------+---------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; hex[0]                                              ; Selector37          ; yes                    ;
+; hex[1]                                              ; Selector37          ; yes                    ;
+; hex[2]                                              ; Selector37          ; yes                    ;
+; hex[3]                                              ; Selector37          ; yes                    ;
+; hex[4]                                              ; Selector37          ; yes                    ;
+; hex[5]                                              ; Selector37          ; yes                    ;
+; hex[6]                                              ; Selector37          ; yes                    ;
+; hex[8]                                              ; Selector37          ; yes                    ;
+; hex[9]                                              ; Selector37          ; yes                    ;
+; hex[10]                                             ; Selector37          ; yes                    ;
+; hex[11]                                             ; Selector37          ; yes                    ;
+; hex[12]                                             ; Selector37          ; yes                    ;
+; hex[13]                                             ; Selector37          ; yes                    ;
+; hex[14]                                             ; Selector37          ; yes                    ;
+; hex[16]                                             ; Selector37          ; yes                    ;
+; hex[17]                                             ; Selector37          ; yes                    ;
+; hex[18]                                             ; Selector37          ; yes                    ;
+; hex[19]                                             ; Selector37          ; yes                    ;
+; hex[20]                                             ; Selector37          ; yes                    ;
+; hex[21]                                             ; Selector37          ; yes                    ;
+; hex[22]                                             ; Selector37          ; yes                    ;
+; hex[24]                                             ; Selector37          ; yes                    ;
+; hex[25]                                             ; Selector37          ; yes                    ;
+; hex[26]                                             ; Selector37          ; yes                    ;
+; hex[27]                                             ; Selector37          ; yes                    ;
+; hex[28]                                             ; Selector37          ; yes                    ;
+; hex[29]                                             ; Selector37          ; yes                    ;
+; hex[30]                                             ; Selector37          ; yes                    ;
+; led[0]                                              ; Selector16          ; yes                    ;
+; led[1]                                              ; Selector16          ; yes                    ;
+; led[2]                                              ; Selector16          ; yes                    ;
+; led[3]                                              ; Selector16          ; yes                    ;
+; led[4]                                              ; Selector16          ; yes                    ;
+; led[5]                                              ; Selector16          ; yes                    ;
+; led[6]                                              ; Selector16          ; yes                    ;
+; led[7]                                              ; Selector16          ; yes                    ;
+; led[8]                                              ; Selector16          ; yes                    ;
+; led[9]                                              ; Selector16          ; yes                    ;
+; reset                                               ; Selector16          ; yes                    ;
+; countsave[0]                                        ; countsave[3]        ; yes                    ;
+; countsave[11]                                       ; countsave[3]        ; yes                    ;
+; countsave[15]                                       ; countsave[3]        ; yes                    ;
+; countsave[14]                                       ; countsave[3]        ; yes                    ;
+; countsave[13]                                       ; countsave[3]        ; yes                    ;
+; countsave[12]                                       ; countsave[3]        ; yes                    ;
+; countsave[10]                                       ; countsave[3]        ; yes                    ;
+; countsave[9]                                        ; countsave[3]        ; yes                    ;
+; countsave[8]                                        ; countsave[3]        ; yes                    ;
+; countsave[7]                                        ; countsave[3]        ; yes                    ;
+; countsave[6]                                        ; countsave[3]        ; yes                    ;
+; countsave[5]                                        ; countsave[3]        ; yes                    ;
+; countsave[4]                                        ; countsave[3]        ; yes                    ;
+; countsave[3]                                        ; countsave[3]        ; yes                    ;
+; countsave[2]                                        ; countsave[3]        ; yes                    ;
+; countsave[1]                                        ; countsave[3]        ; yes                    ;
+; read                                                ; Selector37          ; yes                    ;
+; timing[0]                                           ; timing              ; yes                    ;
+; timing[1]                                           ; timing              ; yes                    ;
+; timing[2]                                           ; timing              ; yes                    ;
+; timing[3]                                           ; timing              ; yes                    ;
+; timing[4]                                           ; timing              ; yes                    ;
+; timing[5]                                           ; timing              ; yes                    ;
+; timing[6]                                           ; timing              ; yes                    ;
+; timing[7]                                           ; timing              ; yes                    ;
+; timing[8]                                           ; timing              ; yes                    ;
+; timing[9]                                           ; timing              ; yes                    ;
+; timing[10]                                          ; timing              ; yes                    ;
+; timing[11]                                          ; timing              ; yes                    ;
+; Number of user-specified and inferred latches = 68  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; state~4                               ; Lost fanout        ;
+; state~5                               ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 125   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 12    ;
+; Number of registers using Asynchronous Clear ; 36    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 28    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; shuffle:leds|Q[0]                       ; 2       ;
+; TopScore:score|low[15]                  ; 2       ;
+; TopScore:score|low[14]                  ; 2       ;
+; TopScore:score|low[13]                  ; 2       ;
+; TopScore:score|low[12]                  ; 2       ;
+; TopScore:score|low[11]                  ; 2       ;
+; TopScore:score|low[10]                  ; 2       ;
+; TopScore:score|low[9]                   ; 2       ;
+; TopScore:score|low[8]                   ; 3       ;
+; TopScore:score|low[7]                   ; 2       ;
+; TopScore:score|low[6]                   ; 3       ;
+; TopScore:score|low[5]                   ; 3       ;
+; TopScore:score|low[4]                   ; 2       ;
+; TopScore:score|low[3]                   ; 2       ;
+; TopScore:score|low[2]                   ; 2       ;
+; TopScore:score|low[1]                   ; 3       ;
+; TopScore:score|low[0]                   ; 2       ;
+; LFSR:rand|Q[1]                          ; 2       ;
+; LFSR:rand|Q[2]                          ; 2       ;
+; LFSR:rand|Q[3]                          ; 2       ;
+; LFSR:rand|Q[4]                          ; 2       ;
+; LFSR:rand|Q[5]                          ; 3       ;
+; LFSR:rand|Q[6]                          ; 2       ;
+; LFSR:rand|Q[7]                          ; 2       ;
+; LFSR:rand|Q[8]                          ; 3       ;
+; LFSR:rand|Q[9]                          ; 2       ;
+; LFSR:rand|Q[10]                         ; 3       ;
+; LFSR:rand|Q[11]                         ; 2       ;
+; LFSR:rand|Q[0]                          ; 2       ;
+; Total number of inverted registers = 29 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Project2_top|delay:time1|count[11]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |Project2_top|TopScore:score|print[12] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Project2_top ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; RESTING        ; 00    ; Unsigned Binary                                     ;
+; WAITING        ; 01    ; Unsigned Binary                                     ;
+; TIMING         ; 10    ; Unsigned Binary                                     ;
+; SHOWING        ; 11    ; Unsigned Binary                                     ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Clock_divider:clock1 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; clkdivide      ; 50000 ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BCD_counter:counter ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; j              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: TopScore:score ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; j              ; 4     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_221" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; point ; Input ; Info     ; Stuck at VCC                         ;
++-------+-------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_220" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                         ;
++-------+-------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_219" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                         ;
++-------+-------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "TopScore:score|BCD_decoder:comb_218" ;
++-------+-------+----------+--------------------------------------+
+; Port  ; Type  ; Severity ; Details                              ;
++-------+-------+----------+--------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                         ;
++-------+-------+----------+--------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_63" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; point ; Input ; Info     ; Stuck at VCC                             ;
++-------+-------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_counter:counter|BCD:comb_58"                                                     ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; carry ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_57" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_51" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "BCD_counter:counter|BCD_decoder:comb_45" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; point ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 56                          ;
+; cycloneiii_ff         ; 125                         ;
+;     CLR               ; 20                          ;
+;     ENA CLR           ; 16                          ;
+;     ENA SLD           ; 12                          ;
+;     plain             ; 77                          ;
+; cycloneiii_lcell_comb ; 372                         ;
+;     arith             ; 56                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 316                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 75                          ;
+;         3 data inputs ; 119                         ;
+;         4 data inputs ; 112                         ;
+;                       ;                             ;
+; Max LUT depth         ; 6.50                        ;
+; Average LUT depth     ; 3.01                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed May 08 22:16:04 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project2 -c project2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file delay.v
+    Info (12023): Found entity 1: delay File: C:/Users/thwaitester/Documents/fpga/project2/delay.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file lfsr.v
+    Info (12023): Found entity 1: LFSR File: C:/Users/thwaitester/Documents/fpga/project2/LFSR.v Line: 2
+Warning (10463): Verilog HDL Declaration warning at Project2_top.v(58): "rand" is SystemVerilog-2005 keyword File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file project2_top.v
+    Info (12023): Found entity 1: Project2_top File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_decoder.v
+    Info (12023): Found entity 1: BCD_decoder File: C:/Users/thwaitester/Documents/fpga/project2/BCD_decoder.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_counter.v
+    Info (12023): Found entity 1: BCD_counter File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.v
+    Info (12023): Found entity 1: Clock_divider File: C:/Users/thwaitester/Documents/fpga/project2/Clock_divider.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file topscore.v
+    Info (12023): Found entity 1: TopScore File: C:/Users/thwaitester/Documents/fpga/project2/TopScore.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file bcd.v
+    Info (12023): Found entity 1: BCD File: C:/Users/thwaitester/Documents/fpga/project2/BCD.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file shuffle.v
+    Info (12023): Found entity 1: shuffle File: C:/Users/thwaitester/Documents/fpga/project2/shuffle.v Line: 2
+Critical Warning (10846): Verilog HDL Instantiation warning at BCD_counter.v(32): instance has no name File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at BCD_counter.v(33): instance has no name File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at TopScore.v(44): instance has no name File: C:/Users/thwaitester/Documents/fpga/project2/TopScore.v Line: 44
+Info (12127): Elaborating entity "Project2_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Project2_top.v(78): object "resetread" assigned a value but never read File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 78
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(96): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 96
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(101): variable "ok" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 101
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(103): variable "SW" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 103
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(105): variable "start" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 105
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(111): variable "flip" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 111
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(116): variable "ok" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 116
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(142): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 142
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(147): variable "hex0" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 147
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(148): variable "rtime" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 148
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(157): variable "hex3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 157
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(164): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 164
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(166): variable "myled" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 166
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(169): variable "hex3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 169
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(177): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 177
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(178): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 178
+Warning (10235): Verilog HDL Always Construct warning at Project2_top.v(179): variable "hex3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 179
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "read", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "reset", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "hex", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "timing", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "led", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Warning (10240): Verilog HDL Always Construct warning at Project2_top.v(141): inferring latch(es) for variable "countsave", which holds its previous value in one or more paths through the always construct File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[0]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[1]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[2]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[3]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[4]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[5]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[6]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[7]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[8]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[9]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[10]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[11]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[12]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[13]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[14]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "countsave[15]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[0]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[1]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[2]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[3]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[4]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[5]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[6]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[7]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[8]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "led[9]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[0]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[1]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[2]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[3]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[4]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[5]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[6]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[7]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[8]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[9]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[10]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "timing[11]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[0]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[1]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[2]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[3]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[4]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[5]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[6]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[7]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[8]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[9]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[10]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[11]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[12]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[13]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[14]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[15]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[16]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[17]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[18]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[19]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[20]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[21]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[22]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[23]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[24]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[25]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[26]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[27]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[28]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[29]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[30]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "hex[31]" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "reset" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (10041): Inferred latch for "read" at Project2_top.v(141) File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+Info (12128): Elaborating entity "Clock_divider" for hierarchy "Clock_divider:clock1" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 48
+Warning (10230): Verilog HDL assignment warning at Clock_divider.v(21): truncated value with size 32 to match size of target (31) File: C:/Users/thwaitester/Documents/fpga/project2/Clock_divider.v Line: 21
+Info (12128): Elaborating entity "delay" for hierarchy "delay:time1" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 49
+Warning (10230): Verilog HDL assignment warning at delay.v(16): truncated value with size 32 to match size of target (12) File: C:/Users/thwaitester/Documents/fpga/project2/delay.v Line: 16
+Info (12128): Elaborating entity "BCD_counter" for hierarchy "BCD_counter:counter" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 52
+Warning (10036): Verilog HDL or VHDL warning at BCD_counter.v(8): object "enclk" assigned a value but never read File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 8
+Info (12128): Elaborating entity "BCD" for hierarchy "BCD_counter:counter|BCD:comb_40" File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 32
+Warning (10230): Verilog HDL assignment warning at BCD.v(22): truncated value with size 32 to match size of target (4) File: C:/Users/thwaitester/Documents/fpga/project2/BCD.v Line: 22
+Info (12128): Elaborating entity "BCD_decoder" for hierarchy "BCD_counter:counter|BCD_decoder:comb_45" File: C:/Users/thwaitester/Documents/fpga/project2/BCD_counter.v Line: 33
+Info (12128): Elaborating entity "TopScore" for hierarchy "TopScore:score" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 53
+Info (12128): Elaborating entity "LFSR" for hierarchy "LFSR:rand" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 58
+Info (12128): Elaborating entity "shuffle" for hierarchy "shuffle:leds" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 59
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer BCD_counter:counter|comb~4
+    Warning (19017): Found clock multiplexer BCD_counter:counter|comb~5
+    Warning (19017): Found clock multiplexer BCD_counter:counter|comb~6
+    Warning (19017): Found clock multiplexer BCD_counter:counter|comb~7
+Warning (13012): Latch led[0] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[1] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[2] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[3] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[4] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[5] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[6] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[7] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[8] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch led[9] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch reset has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal state.TIMING File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 75
+Warning (13012): Latch countsave[0] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[11] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[15] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[14] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[13] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[12] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[10] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[9] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[8] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[7] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[6] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[5] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[4] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[3] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[2] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Warning (13012): Latch countsave[1] has unsafe behavior File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 141
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 35
+Info (13000): Registers with preset signals will power-up high File: C:/Users/thwaitester/Documents/fpga/project2/TopScore.v Line: 21
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 15
+    Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 16
+    Warning (13410): Pin "HEX2[7]" is stuck at VCC File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 17
+    Warning (13410): Pin "HEX3[7]" is stuck at GND File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 24 assignments for entity "Project1_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity Project1_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Project1_top -section_id Top was ignored
+Info (144001): Generated suppressed messages file C:/Users/thwaitester/Documents/fpga/project2/output_files/project2.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK_10MHZ" File: C:/Users/thwaitester/Documents/fpga/project2/Project2_top.v Line: 25
+Info (21057): Implemented 460 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 404 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Wed May 08 22:16:32 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:53
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/thwaitester/Documents/fpga/project2/output_files/project2.map.smsg.
+
+

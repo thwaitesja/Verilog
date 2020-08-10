@@ -1,0 +1,40 @@
+module Sub(
+	output		     [3:0]		sum,
+	output		     				carry,
+	input 		     [3:0]		val0,
+	input				  [3:0]		val1
+);
+
+
+wire  [4:0] send;
+assign send[0]=0;
+parameter j=4;
+generate
+	genvar i;
+	for (i=0; i<j; i=i+1)
+		begin: subit
+			full_subtractor instsub(val0[i], val1[i], send[i], sum[i], send[i+1]);
+		end
+endgenerate
+assign send[4]=carry;
+endmodule
+
+module full_subtractor(
+  input  bit1,
+  input  sbit2,
+  input  borrowi,
+  output sum,
+  output borrowo);
+ 
+  wire   Wire1;
+  wire   Wire2;
+  wire   Wire3;
+       
+  assign wire1 = bit1 ^ sbit2;
+  assign wire2 = wire1 & ~borrowi;
+  assign wire3 = ~bit1 & sbit2;
+ 
+  assign sum   = wire1 ^ borrowi;
+  assign borrowo = wire2 | wire3;
+ 
+endmodule 

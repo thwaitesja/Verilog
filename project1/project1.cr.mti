@@ -1,0 +1,85 @@
+C:/Users/thwaitester/Documents/fpga/project1/modulo12 {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/modulo12
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module count
+
+Top level modules:
+	count
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Add.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Add.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Add
+
+Top level modules:
+	Add
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Div.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Div.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Div
+
+Top level modules:
+	Div
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Comparison.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Comparison.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Comparison
+
+Top level modules:
+	Comparison
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Magic.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Magic.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Magic
+
+Top level modules:
+	Magic
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Sub.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Sub.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Sub
+
+Top level modules:
+	Sub
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Mult.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Mult.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Mult
+
+Top level modules:
+	Mult
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Arithmetic
+
+Top level modules:
+	Arithmetic
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Project1_top.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Project1_top.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Project1_top
+
+Top level modules:
+	Project1_top
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/logical.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/logical.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module logical
+
+Top level modules:
+	logical
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Multiplexer
+
+Top level modules:
+	Multiplexer
+
+} {} {}} C:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v {1 {vlog -work work -stats=none C:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SevenSegment
+
+Top level modules:
+	SevenSegment
+
+} {} {}}

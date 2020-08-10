@@ -1,0 +1,185 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'read'
+Slack : -8.316
+TNS   : -224.471
+
+Type  : Slow 1200mV 85C Model Setup 'state.SHOWING'
+Slack : -5.300
+TNS   : -221.834
+
+Type  : Slow 1200mV 85C Model Setup 'reset'
+Slack : -5.056
+TNS   : -254.082
+
+Type  : Slow 1200mV 85C Model Setup 'CLK_50MHZ'
+Slack : -3.973
+TNS   : -68.027
+
+Type  : Slow 1200mV 85C Model Setup 'Clock_divider:clock1|flash'
+Slack : -3.570
+TNS   : -52.784
+
+Type  : Slow 1200mV 85C Model Hold 'Clock_divider:clock1|flash'
+Slack : -0.718
+TNS   : -1.436
+
+Type  : Slow 1200mV 85C Model Hold 'read'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reset'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLK_50MHZ'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'state.SHOWING'
+Slack : 0.870
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50MHZ'
+Slack : -3.000
+TNS   : -64.732
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock_divider:clock1|flash'
+Slack : -1.403
+TNS   : -49.105
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'read'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reset'
+Slack : -1.403
+TNS   : -26.657
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'state.SHOWING'
+Slack : 0.328
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'read'
+Slack : -7.531
+TNS   : -202.434
+
+Type  : Slow 1200mV 0C Model Setup 'state.SHOWING'
+Slack : -4.968
+TNS   : -203.955
+
+Type  : Slow 1200mV 0C Model Setup 'reset'
+Slack : -4.697
+TNS   : -231.365
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50MHZ'
+Slack : -3.610
+TNS   : -58.538
+
+Type  : Slow 1200mV 0C Model Setup 'Clock_divider:clock1|flash'
+Slack : -3.199
+TNS   : -47.014
+
+Type  : Slow 1200mV 0C Model Hold 'Clock_divider:clock1|flash'
+Slack : -0.691
+TNS   : -1.382
+
+Type  : Slow 1200mV 0C Model Hold 'read'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reset'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50MHZ'
+Slack : 0.415
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'state.SHOWING'
+Slack : 0.738
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50MHZ'
+Slack : -3.000
+TNS   : -64.732
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock_divider:clock1|flash'
+Slack : -1.403
+TNS   : -49.183
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'read'
+Slack : -1.403
+TNS   : -44.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reset'
+Slack : -1.403
+TNS   : -26.657
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'state.SHOWING'
+Slack : 0.409
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'read'
+Slack : -3.273
+TNS   : -87.486
+
+Type  : Fast 1200mV 0C Model Setup 'state.SHOWING'
+Slack : -2.161
+TNS   : -60.960
+
+Type  : Fast 1200mV 0C Model Setup 'reset'
+Slack : -1.759
+TNS   : -71.985
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50MHZ'
+Slack : -1.183
+TNS   : -8.470
+
+Type  : Fast 1200mV 0C Model Setup 'Clock_divider:clock1|flash'
+Slack : -1.134
+TNS   : -11.853
+
+Type  : Fast 1200mV 0C Model Hold 'Clock_divider:clock1|flash'
+Slack : -0.309
+TNS   : -0.618
+
+Type  : Fast 1200mV 0C Model Hold 'read'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reset'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50MHZ'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'state.SHOWING'
+Slack : 0.322
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50MHZ'
+Slack : -3.000
+TNS   : -54.506
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock_divider:clock1|flash'
+Slack : -1.000
+TNS   : -35.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'read'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reset'
+Slack : -1.000
+TNS   : -19.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'state.SHOWING'
+Slack : 0.287
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -1,0 +1,5 @@
+module HalfAdd(a,b,c,s);
+	input a,b;
+	output c,s;
+	wire an,bn;
+	wire u,v;

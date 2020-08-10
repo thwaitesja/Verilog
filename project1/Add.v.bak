@@ -1,0 +1,40 @@
+module Add(
+	output		     [3:0]		sum,
+	output		     				carry,
+	input 		     [3:0]		val0,
+	input				  [3:0]		val1
+);
+
+
+wire  [4:0] send;
+assign send[0]=0;
+parameter j=4;
+generate
+	genvar i;
+	for (i=0; i<j; i=i+1)
+		begin: addit
+			full_adder instadd(val0[i], val1[i], send[i], sum[i], send[i+1]);
+		end
+endgenerate
+assign send[4]=carry;
+endmodule
+
+module full_adder(
+  input  bit1,
+  input  bit2,
+  input  carryi,
+  output sum,
+  output carryo);
+ 
+  wire   Wire1;
+  wire   Wire2;
+  wire   Wire3;
+       
+  assign wire1 = bit1 ^ bit2;
+  assign wire2 = wire1 & carryi;
+  assign wire3 = bit1 & bit2;
+ 
+  assign sum   = wire1 ^ carryi;
+  assign carryo = wire2 | wire3;
+ 
+endmodule 

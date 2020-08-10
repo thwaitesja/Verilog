@@ -1,0 +1,7 @@
+module Arithmetic(
+
+	output		     [7:0]		numo,
+	output		     				carryo,
+	input 		     [7:0]		numi,
+	input				  [1:0]		sel
+);

@@ -1,0 +1,18 @@
+//Justin Thwaites
+module LFSR(
+
+	output		[11:0]	q,
+	//input		  	[11:0]	R,
+	//input		  				L,
+	input 		  			clk//50mhz
+
+);
+reg[11:0] Q=0;
+
+always @(posedge clk)
+ //if (L)
+ // Q<=R; 
+//else 
+  Q <= {Q[5]^(Q[8]^(Q[10]^Q[11])),Q[0],Q[1],Q[2],Q[3],Q[4],Q[5],Q[6],Q[7],Q[8], Q[9], Q[10]};//randomly goes through the numbers
+endmodule 
+

@@ -1,0 +1,272 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vAdd
+Z0 !s110 1554664375
+!i10b 1
+!s100 ]z0<SjJ?0SIY1][7m`HnZ0
+II7TV?X4W2C>^07=Z>FVMC3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/thwaitester/Documents/fpga/project1
+w1553204662
+8C:/Users/thwaitester/Documents/fpga/project1/Add.v
+FC:/Users/thwaitester/Documents/fpga/project1/Add.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1554664375.000000
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Add.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Add.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@add
+vArithmetic
+Z7 !s110 1554664373
+!i10b 1
+!s100 B`kl2]9?N3EmJ^`Rfd4Q<3
+IkUSI3lC[V8_<V:DFmE[T[3
+R1
+R2
+w1553204498
+8C:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v
+FC:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1554664373.000000
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Arithmetic.v|
+!i113 1
+R5
+R6
+n@arithmetic
+vComparison
+R7
+!i10b 1
+!s100 R9mPzbM]fiXad[@PITkNA0
+I]d93C;T^nIdd_k7@7kS?b1
+R1
+R2
+w1553384581
+8C:/Users/thwaitester/Documents/fpga/project1/Comparison.v
+FC:/Users/thwaitester/Documents/fpga/project1/Comparison.v
+L0 2
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Comparison.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Comparison.v|
+!i113 1
+R5
+R6
+n@comparison
+vcount
+!s110 1554664376
+!i10b 1
+!s100 ;WPJ?o2DJo1OQJb41STNl1
+IDkik:CzE_[M?>H^M46zE;1
+R1
+R2
+w1554664109
+8C:\Users\thwaitester\Documents\fpga\project1\Mod12.v
+FC:\Users\thwaitester\Documents\fpga\project1\Mod12.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:\Users\thwaitester\Documents\fpga\project1\Mod12.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\thwaitester\Documents\fpga\project1\Mod12.v|
+!i113 1
+R5
+R6
+vDiv
+Z9 !s110 1554664374
+!i10b 1
+!s100 EWhdYOhFY0X1Fbaz3VTG82
+I]QK]A5Skf^TGG:abLM;KD3
+R1
+R2
+w1553204723
+8C:/Users/thwaitester/Documents/fpga/project1/Div.v
+FC:/Users/thwaitester/Documents/fpga/project1/Div.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z10 !s108 1554664374.000000
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Div.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Div.v|
+!i113 1
+R5
+R6
+n@div
+vlogical
+R7
+!i10b 1
+!s100 ef1NN][=[KO6HmGcQ59Gb0
+IK4GVhjClGG<Vn1:=C7E3T1
+R1
+R2
+w1553376524
+8C:/Users/thwaitester/Documents/fpga/project1/logical.v
+FC:/Users/thwaitester/Documents/fpga/project1/logical.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/thwaitester/Documents/fpga/project1/logical.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/logical.v|
+!i113 1
+R5
+R6
+vMagic
+R9
+!i10b 1
+!s100 1cnb:a3oDDSm<eSVWC4AN1
+I]h42IXCGnR=8?a=_ga0Oz0
+R1
+R2
+w1553189458
+8C:/Users/thwaitester/Documents/fpga/project1/Magic.v
+FC:/Users/thwaitester/Documents/fpga/project1/Magic.v
+L0 2
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Magic.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Magic.v|
+!i113 1
+R5
+R6
+n@magic
+vMult
+R0
+!i10b 1
+!s100 e_ml?Q^3G46:FCMac_PcC1
+IU>H@L2_3_EFdY4k2:8DkZ1
+R1
+R2
+w1553204734
+8C:/Users/thwaitester/Documents/fpga/project1/Mult.v
+FC:/Users/thwaitester/Documents/fpga/project1/Mult.v
+L0 1
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Mult.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Mult.v|
+!i113 1
+R5
+R6
+n@mult
+vMultiplexer
+R7
+!i10b 1
+!s100 EKogS]55JPhfli52h=:B63
+ICc>PTYYYh]o@oLGJQ]O313
+R1
+R2
+w1553384569
+8C:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v
+FC:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v
+L0 2
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Multiplexer.v|
+!i113 1
+R5
+R6
+n@multiplexer
+vProject1_top
+!s110 1554664372
+!i10b 1
+!s100 VdQ]ZIh>]G;zM@N;CJlf_0
+I>XgazmC5;9l4hXZAzNdZN0
+R1
+R2
+w1553375997
+8C:/Users/thwaitester/Documents/fpga/project1/Project1_top.v
+FC:/Users/thwaitester/Documents/fpga/project1/Project1_top.v
+L0 6
+R3
+r1
+!s85 0
+31
+!s108 1554664372.000000
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Project1_top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Project1_top.v|
+!i113 1
+R5
+R6
+n@project1_top
+vSevenSegment
+R9
+!i10b 1
+!s100 on<``7MVW]8fH5=dhP6cd0
+ImZjQ:ek?Vb6>Rb08YeUQT3
+R1
+R2
+w1553206693
+8C:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v
+FC:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v
+L0 2
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/SevenSegment.v|
+!i113 1
+R5
+R6
+n@seven@segment
+vSub
+R0
+!i10b 1
+!s100 jb4L_MnbT;2CYfRL?IAb02
+IH2nS;YeSUd2CknXT8G82F0
+R1
+R2
+w1553204838
+8C:/Users/thwaitester/Documents/fpga/project1/Sub.v
+FC:/Users/thwaitester/Documents/fpga/project1/Sub.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/thwaitester/Documents/fpga/project1/Sub.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/thwaitester/Documents/fpga/project1/Sub.v|
+!i113 1
+R5
+R6
+n@sub

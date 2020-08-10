@@ -1,0 +1,23 @@
+// ECEN2350 Intro to Verilog
+// 7/15/2018, Michael Deeds
+// University of Colorado, Boulder
+// 
+
+
+module Project1_top(
+
+	output		     [7:0]		HEX0,
+	output		     [7:0]		HEX1,
+	input 		     [9:0]		SW,
+	input				  [1:0]		key
+);
+
+
+wire [3:0] num;
+assign num[3:0]=SW[3:0];
+			
+
+
+SevenSegment(HEX0[7:0], num[3:0], point);
+SevenSegment(~HEX1[7:0], num[3:0], point);
+endmodule
